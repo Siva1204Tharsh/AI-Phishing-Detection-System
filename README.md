@@ -15,3 +15,5 @@ This project uses machine learning to detect phishing messages (email/SMS), sugg
 ## Dashboard using Streamlit!
 
 ![alt text](image.png)
+
+## API Integration
