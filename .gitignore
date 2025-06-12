@@ -1,5 +1,12 @@
-venv/
+# Python-related
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# Virtualenv
+venv/
+
+# Model artifacts
 *.pkl
-*.csv
+*.joblib
