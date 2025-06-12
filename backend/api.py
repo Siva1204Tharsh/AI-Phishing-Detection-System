@@ -44,3 +44,6 @@ def get_logs():
         df = pd.read_csv(LOG_FILE)
         return df.tail(10).to_dict(orient="records")
     return []
+
+
+### create a test endpoint
