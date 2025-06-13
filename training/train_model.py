@@ -18,19 +18,19 @@ df.to_csv("sms.csv", index=False)
 
 
 
-# # Train/test split
-# X_train, X_test, y_train, y_test = train_test_split(df['message'], df['label'], test_size=0.2)
+# Train/test split
+X_train, X_test, y_train, y_test = train_test_split(df['message'], df['label'], test_size=0.2)
 
-# # Build model
-# model = Pipeline([
-#     ('tfidf', TfidfVectorizer(stop_words='english')),
-#     ('clf', RandomForestClassifier(n_estimators=100))     
-# ])
+# Build model
+model = Pipeline([
+    ('tfidf', TfidfVectorizer(stop_words='english')),
+    ('clf', RandomForestClassifier(n_estimators=100))     
+])
 
-# model.fit(X_train, y_train)
-# print(classification_report(y_test, model.predict(X_test)))
+model.fit(X_train, y_train)
+print(classification_report(y_test, model.predict(X_test)))
 
-# # # Save model
-# # joblib.dump(model, "../backend/model/phishing_model.pkl")
+# # Save model
+# joblib.dump(model, "../backend/model/phishing_model.pkl")
 
 

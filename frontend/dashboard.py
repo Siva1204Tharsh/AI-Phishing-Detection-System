@@ -27,3 +27,4 @@ log_resp = requests.get(f"{API_URL}/logs")
 if log_resp.ok:
     df_logs = pd.DataFrame(log_resp.json())
     st.dataframe(df_logs)
+
